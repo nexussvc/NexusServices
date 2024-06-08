@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nexus Services</title>
+	<link rel="stylesheet" href="styles/styles1.css">
+	<link rel="stylesheet" href="styles/styles2.css">
+	<link rel="stylesheet" href="styles/styles3.css">
+	<link rel="icon" type="image/x-icon" href="images/logo_2.jpg">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/mac.jpg");
+  min-height: 100%;
+}
+
+.bar .button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar black card" id="myNavbar">
+    <a href="index.html" class="bar-item button wide"><img src="images/logo_2.jpg" width="26" height="26">     NEXUS SERVICES</a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small">
+      <a href="#about" class="bar-item button">ABOUT</a>
+      <a href="offers.html" class="bar-item button"> OFFERS</a>
+	  <a href="contact.html" class="bar-item button"> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="close()" class="bar-item button large padding-16">Close ×</a>
+  <a href="index.html" onclick="close()" class="bar-item button">HOME</a>
+  <a href="#about" onclick="close()" class="bar-item button">ABOUT</a>
+  <a href="offers.html" onclick="close()" class="bar-item button">OFFERS</a>
+  <a href="contact.html" onclick="close()" class="bar-item button">CONTACT</a>
+</nav>
+
+<div class="container dark-grey" style="padding:128px 16px" id="about">
+  <h3 class="center">ABOUT NEXUS SERVICES</h3>
+  <div class="row-padding center" style="margin-top:64px">
+    <div class="quarter">
+      <p class="large">Who We Are</p>
+      <p>At Nexus Services, we are dedicated to transforming the way businesses connect with their ideal customers. 
+	  Helping companies across various industries grow their sales pipelines with high-quality leads is a great passion of ours.</p>
+    </div>
+    <div class="quarter">
+      <p class="large">Our Beginning</p>
+      <p>Founded recently, Nexus Services emerged from a desire to revolutionize lead generation for businesses of all sizes. 
+	  We understand the challenges that startups and small businesses face, and we're here to provide tailored solutions that drive tangible results.</p>
+    </div>
+    <div class="quarter">
+      <p class="large">Why Choose Nexus Services?</p>
+      <p><b>Fresh Ideas:</b> We bring a fresh perspective and innovative ideas to the table, tailored to meet the needs of startups and small businesses.</p>
+	  <p><b>Personalized Approach:</b> Every business is unique, and we take the time to understand your goals and challenges, crafting personalized solutions that deliver results.</p>
+	  <p><b>Commitment to Growth:</b> Our passion for growth is at the core of everything we do. We're dedicated to helping your business thrive in today's competitive landscape.</p>
+    </div>
+    <div class="quarter">
+      <p class="large">Our Values</p>
+      <p><b>Integrity:</b> We believe in conducting business with the highest level of integrity. Transparency and honesty are fundamental to our relationships with clients.</p>
+	  <p><b>Customer Focus:</b> Our clients' success is our success. We are committed to understanding their needs and exceeding their expectations through exceptional service and support.</p>
+	  <p><b>Collaboration:</b> We work closely with our clients, fostering a collaborative environment to achieve the best possible outcomes. 
+	  Our partnership approach ensures that we are aligned with your business goals and objectives.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container grey" style="padding:128px 16px; text-align: justify;">
+  <div class="row-padding">
+    <div class="col m6">
+      <h3>Meet Our Founder:</h3>
+      <p>All this wouldn't be possible without the leadership and dedication brought by our founder and CEO, William Taylor. 
+	  He has demonstrated an extraordinary level of passion and vision that inspires everyone at Nexus Services. 
+	  Driven by a relentless pursuit of excellence and innovation, William founded Nexus Services with a bold vision to revolutionize his clients' businesses with a genuine desire to help and make a positive impact on their businesses..</p>
+	  <p>William's leadership style is characterized by maturity, wisdom, and a genuine desire to make a positive impact. 
+	  He leads by example, inspiring his team members to embrace creativity, embrace challenges, and strive for excellence in everything they do. 
+	  His ability to organize, manage, and inspire his team has been essential in the company's success, creating a culture of excellence that extends to each aspect of the organization.</p>
+	  <p>Under William's guidance, Nexus Services is set on growing into a dynamic and everlasting company. 
+	  His emphasis on continuous improvement and his unwavering commitment have created an optimized system that stands for growth and efficiency.</p>
+    </div>
+    <div class="col m6">
+      <img class="image round-large" src="images/founder.jpg" alt="Founder" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-16">
+  <p>Powered by <a href="https://github.com/" title="GitHub" target="_blank" class="hover-text-yellow">GitHub</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>

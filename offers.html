@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nexus Services</title>
+	<link rel="stylesheet" href="styles/styles1.css">
+	<link rel="stylesheet" href="styles/styles2.css">
+	<link rel="stylesheet" href="styles/styles3.css">
+	<link rel="icon" type="image/x-icon" href="images/logo_2.jpg">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.bar .button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar black card" id="myNavbar">
+    <a href="index.html" class="bar-item button wide"><img src="images/logo_2.jpg" width="26" height="26">     NEXUS SERVICES</a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small">
+      <a href="about.html" class="bar-item button">ABOUT</a>
+      <a href="#offers" class="bar-item button"> OFFERS</a>
+	  <a href="contact.html" class="bar-item button"> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="close()" class="bar-item button large padding-16">Close ×</a>
+  <a href="index.html" onclick="close()" class="bar-item button">HOME</a>
+  <a href="about.html" onclick="close()" class="bar-item button">ABOUT</a>
+  <a href="#offers" onclick="close()" class="bar-item button">OFFERS</a>
+  <a href="contact.html" onclick="close()" class="bar-item button">CONTACT</a>
+</nav>
+
+<!-- Offers Section -->
+<div class="container center dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>Offers</h3>
+  <p class="large">Our Services</p>
+  <div class="row-padding" style="margin-top:64px">
+    <div class="third section">
+      <ul class="ul white hover-shadow">
+        <li class="black xlarge padding-32">Advertising</li>
+        <li class="padding-16"><b>Targeted Advertising Solutions</b></li>
+        <li class="padding-16"><b>Maximized ROI</b></li>
+        <li class="padding-16"><b>Relevant Traffic</b></li>
+        <li class="padding-16"><b>Optimized Ads</b></li>
+        <li class="padding-16">
+          <p>Nexus Services provides targeted advertising solutions to help businesses reach their desired audience effectively. 
+		  Whether it's through digital channels like Google Ads or traditional media platforms, we tailor advertising strategies to maximize ROI and drive relevant traffic to clients' businesses. 
+		  Our process typically involves four core steps designed to optimize ads and boost business growth.</p>
+        </li>
+        <li class="light-grey padding-24">
+          <a href="contact.html"><button class="button black padding-large">Sign Up</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="third">
+      <ul class="ul white hover-shadow">
+        <li class="yellow xlarge padding-48">Lead Generation</li>
+        <li class="padding-16"><b>Strategic Digital Marketing Techniques</b></li>
+        <li class="padding-16"><b>Data Analysis</b></li>
+        <li class="padding-16"><b>Personalized Outreach</b></li>
+        <li class="padding-16"><b>Flexible Process</b></li>
+        <li class="padding-16">
+          <p>Nexus Services' lead generation service is at the core of its offerings. 
+		  Through a strategic blend of digital marketing techniques, data analysis, and personalized outreach, we help businesses identify and capture qualified leads. 
+		  Our process typically involves five essential steps designed to optimize lead generation and foster business growth. 
+		  However, based on your preferences and needs, we can shift to a 3-step approach that offers the same efficiency.</p>
+        </li>
+        <li class="light-grey padding-24">
+          <a href="contact.html"><button class="button black padding-large">Sign Up</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="third section">
+      <ul class="ul white hover-shadow">
+        <li class="black xlarge padding-32">Social Media Marketing</li>
+        <li class="padding-16"><b>Engaging Campaigns</b></li>
+        <li class="padding-16"><b>Comprehensive Management</b></li>
+        <li class="padding-16"><b>Targeted Social Media Platforms</b></li>
+        <li class="padding-16"><b>Increased Brand Awareness</b></li>
+        <li class="padding-16">
+          <p>Leveraging the power of social media platforms, Nexus Services crafts compelling marketing campaigns to engage with target audiences. 
+		  From creating captivating content to managing social media profiles and running targeted ads, 
+		  we help businesses build brand awareness, drive website traffic, and generate leads through platforms like Facebook, Instagram, Twitter, LinkedIn, and more.</p>
+        </li>
+        <li class="light-grey padding-24">
+          <a href="contact.html"><button class="button black padding-large">Sign Up</button></a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-16">
+  <p>Powered by <a href="https://github.com/" title="GitHub" target="_blank" class="hover-text-yellow">GitHub</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>
