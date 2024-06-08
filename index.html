@@ -37,25 +37,25 @@ body, html {
     <a href="#home" class="bar-item button wide"><img src="images/logo_2.jpg" width="26" height="26">     NEXUS SERVICES</a>
     <!-- Right-sided navbar links -->
     <div class="right hide-small">
-      <a href="about.html" class="bar-item button">ABOUT</a>
-      <a href="offers.html" class="bar-item button"> OFFERS</a>
-	  <a href="contact.html" class="bar-item button"> CONTACT</a>
+      <a href="./about" class="bar-item button">ABOUT</a>
+      <a href="./offers" class="bar-item button"> OFFERS</a>
+	  <a href="/./contact" class="bar-item button"> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="open()">
-      <i class="fa fa-bars"></i>
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="openSidebar()">
+      | | |
     </a>
   </div>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="close()" class="bar-item button large padding-16">Close ×</a>
-  <a href="#home" onclick="close()" class="bar-item button">HOME</a>
-  <a href="about.html" onclick="close()" class="bar-item button">ABOUT</a>
-  <a href="offers.html" onclick="close()" class="bar-item button">OFFERS</a>
-  <a href="contact.html" onclick="close()" class="bar-item button">CONTACT</a>
+  <a href="javascript:void(0)" onclick="closeSidebar()" class="bar-item button large padding-16">Close ×</a>
+  <a href="#home" onclick="closeSidebar()" class="bar-item button">HOME</a>
+  <a href="./about" onclick="closeSidebar()" class="bar-item button">ABOUT</a>
+  <a href="./offers" onclick="closeSidebar()" class="bar-item button">OFFERS</a>
+  <a href="./contact" onclick="closeSidebar()" class="bar-item button">CONTACT</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -78,7 +78,7 @@ body, html {
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
-function open() {
+function openSidebar() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';
   } else {
@@ -87,7 +87,7 @@ function open() {
 }
 
 // Close the sidebar with the close button
-function close() {
+function closeSidebar() {
     mySidebar.style.display = "none";
 }
 </script>
